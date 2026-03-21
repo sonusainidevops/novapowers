@@ -11,6 +11,8 @@ import {
   Users,
   CheckCircle2,
   ArrowRight,
+  TrendingUp,
+  Award,
 } from 'lucide-react';
 
 const franchiseTypes = [
@@ -47,10 +49,26 @@ const franchiseTypes = [
 ];
 
 const whyChooseUs = [
-  { icon: Shield, title: 'Trusted Brand', desc: 'Established name in transportation industry' },
-  { icon: Headphones, title: '24/7 Support', desc: 'Round-the-clock assistance for all franchisees' },
-  { icon: DollarSign, title: 'High ROI', desc: 'Attractive returns on your investment' },
-  { icon: Users, title: 'Growing Network', desc: 'Join 50+ successful franchise partners' },
+  {
+    icon: Shield,
+    title: 'Trusted Brand',
+    desc: 'Established name in transportation industry',
+  },
+  {
+    icon: Headphones,
+    title: '24/7 Support',
+    desc: 'Round-the-clock assistance for all franchisees',
+  },
+  {
+    icon: DollarSign,
+    title: 'High ROI',
+    desc: 'Attractive returns on your investment',
+  },
+  {
+    icon: Users,
+    title: 'Growing Network',
+    desc: 'Join 50+ successful franchise partners',
+  },
 ];
 
 const Franchise = () => {
@@ -59,12 +77,12 @@ const Franchise = () => {
       <Header />
       <main>
         {/* Page Header */}
-        <section className="pt-32 pb-16 bg-black">
+        <section className="pt-32 pb-16 bg-gradient-to-br from-primary to-blue-700">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4">
               Franchise Model
             </h1>
-            <p className="text-lg text-gray-400 max-w-xl mx-auto">
+            <p className="text-lg text-white/80 max-w-xl mx-auto">
               Partner with Nova Cabs and build your own successful business
             </p>
           </div>
@@ -74,46 +92,46 @@ const Franchise = () => {
         <section className="py-20 lg:py-28">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <span className="text-yellow-500 font-semibold text-sm uppercase tracking-wider">Business Opportunity</span>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-black mt-3">
+              <span className="text-accent font-semibold text-sm uppercase tracking-wider">Business Opportunity</span>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mt-3">
                 Choose Your Franchise
               </h2>
             </div>
             <div className="grid md:grid-cols-2 gap-8">
               {franchiseTypes.map((franchise) => (
-                <Card key={franchise.title} className="border-0 shadow-xl overflow-hidden border border-gray-100">
-                  <CardHeader className="bg-yellow-400 p-8 text-black">
+                <Card key={franchise.title} className="border-0 shadow-xl overflow-hidden">
+                  <CardHeader className="bg-gradient-to-br from-primary to-primary/90 p-8 text-white">
                     <div className="flex items-center gap-4">
-                      <div className="w-16 h-16 bg-black/20 rounded-2xl flex items-center justify-center">
+                      <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center">
                         <franchise.icon className="w-8 h-8" />
                       </div>
                       <div>
                         <h3 className="text-2xl font-bold">{franchise.title}</h3>
-                        <p className="text-black/70 text-sm">{franchise.vehicles}</p>
+                        <p className="text-white/80 text-sm">{franchise.vehicles}</p>
                       </div>
                     </div>
                   </CardHeader>
                   <CardContent className="p-8">
-                    <p className="text-gray-600 mb-6">{franchise.description}</p>
+                    <p className="text-slate-600 mb-6">{franchise.description}</p>
                     <ul className="space-y-3 mb-8">
                       {franchise.benefits.map((benefit) => (
                         <li key={benefit} className="flex items-center gap-3">
-                          <CheckCircle2 className="w-5 h-5 text-yellow-500 flex-shrink-0" />
-                          <span className="text-gray-700">{benefit}</span>
+                          <CheckCircle2 className="w-5 h-5 text-green-500 flex-shrink-0" />
+                          <span className="text-slate-700">{benefit}</span>
                         </li>
                       ))}
                     </ul>
                     <div className="grid grid-cols-2 gap-4 mb-8">
-                      <div className="bg-gray-50 rounded-xl p-4 text-center">
-                        <div className="text-gray-500 text-sm mb-1">Investment</div>
-                        <div className="font-bold text-black">{franchise.investment}</div>
+                      <div className="bg-slate-50 rounded-xl p-4 text-center">
+                        <div className="text-slate-500 text-sm mb-1">Investment</div>
+                        <div className="font-bold text-slate-900">{franchise.investment}</div>
                       </div>
-                      <div className="bg-gray-50 rounded-xl p-4 text-center">
-                        <div className="text-gray-500 text-sm mb-1">ROI Period</div>
-                        <div className="font-bold text-black">{franchise.roi}</div>
+                      <div className="bg-slate-50 rounded-xl p-4 text-center">
+                        <div className="text-slate-500 text-sm mb-1">ROI Period</div>
+                        <div className="font-bold text-slate-900">{franchise.roi}</div>
                       </div>
                     </div>
-                    <Button asChild className="w-full bg-yellow-400 hover:bg-yellow-500 text-black font-semibold rounded-xl py-6 text-lg">
+                    <Button asChild className="w-full bg-accent hover:bg-accent/90 text-white rounded-xl py-6 text-lg font-semibold">
                       <a href="/contact">
                         Apply Now
                         <ArrowRight className="w-5 h-5 ml-2" />
@@ -127,22 +145,22 @@ const Franchise = () => {
         </section>
 
         {/* Why Choose Us */}
-        <section className="py-20 lg:py-28 bg-gray-50">
+        <section className="py-20 lg:py-28 bg-slate-50">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <span className="text-yellow-500 font-semibold text-sm uppercase tracking-wider">Benefits</span>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-black mt-3">
+              <span className="text-accent font-semibold text-sm uppercase tracking-wider">Benefits</span>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mt-3">
                 Why Partner With Us?
               </h2>
             </div>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
               {whyChooseUs.map((item) => (
                 <div key={item.title} className="bg-white rounded-2xl p-8 text-center shadow-lg hover:shadow-xl transition-shadow">
-                  <div className="w-16 h-16 bg-yellow-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                    <item.icon className="w-8 h-8 text-black" />
+                  <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                    <item.icon className="w-8 h-8 text-primary" />
                   </div>
-                  <h4 className="font-bold text-black mb-2">{item.title}</h4>
-                  <p className="text-gray-500 text-sm">{item.desc}</p>
+                  <h4 className="font-bold text-slate-900 mb-2">{item.title}</h4>
+                  <p className="text-slate-500 text-sm">{item.desc}</p>
                 </div>
               ))}
             </div>
@@ -150,11 +168,11 @@ const Franchise = () => {
         </section>
 
         {/* Steps */}
-        <section className="py-20 lg:py-28 bg-white">
+        <section className="py-20 lg:py-28">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <span className="text-yellow-500 font-semibold text-sm uppercase tracking-wider">Process</span>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-black mt-3">
+              <span className="text-accent font-semibold text-sm uppercase tracking-wider">Process</span>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mt-3">
                 How to Get Started
               </h2>
             </div>
@@ -167,11 +185,11 @@ const Franchise = () => {
                 { step: '5', title: 'Launch', desc: 'Start your franchise operation' },
               ].map((item) => (
                 <div key={item.step} className="text-center">
-                  <div className="w-16 h-16 bg-yellow-400 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                    <span className="text-black text-2xl font-bold">{item.step}</span>
+                  <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center mx-auto mb-4">
+                    <span className="text-white text-2xl font-bold">{item.step}</span>
                   </div>
-                  <h4 className="font-bold text-black mb-2">{item.title}</h4>
-                  <p className="text-gray-500 text-sm">{item.desc}</p>
+                  <h4 className="font-bold text-slate-900 mb-2">{item.title}</h4>
+                  <p className="text-slate-500 text-sm">{item.desc}</p>
                 </div>
               ))}
             </div>
