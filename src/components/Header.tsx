@@ -5,17 +5,17 @@ import {
   SheetContent,
   SheetTrigger,
 } from '@/components/ui/sheet';
-import { Menu, X, Phone } from 'lucide-react';
+import { Menu, X, Phone, ChevronDown } from 'lucide-react';
 
 const navItems = [
-  { label: 'Home', href: '#home' },
-  { label: 'About', href: '#about' },
-  { label: 'Services', href: '#services' },
-  { label: 'Franchise', href: '#franchise' },
-  { label: 'Branches', href: '#branches' },
-  { label: 'Gallery', href: '#gallery' },
-  { label: 'Career', href: '#career' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Home', href: '/' },
+  { label: 'About', href: '/about' },
+  { label: 'Services', href: '/services' },
+  { label: 'Franchise', href: '/franchise' },
+  { label: 'Branches', href: '/branches' },
+  { label: 'Gallery', href: '/gallery' },
+  { label: 'Career', href: '/career' },
+  { label: 'Contact', href: '/contact' },
 ];
 
 export function Header() {
@@ -30,14 +30,6 @@ export function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-    setIsOpen(false);
-  };
-
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -49,21 +41,19 @@ export function Header() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <a href="#home" className="flex items-center gap-2">
-            <div className="relative">
-              <div className="bg-primary rounded-lg px-4 py-2">
-                <span className="text-white font-bold text-xl tracking-tight">NOVA</span>
-                <span className="text-yellow-300 text-sm ml-1">CABS</span>
-              </div>
+          <a href="/" className="flex items-center gap-2">
+            <div className="bg-primary rounded-lg px-4 py-2">
+              <span className="text-white font-bold text-xl tracking-tight">NOVA</span>
+              <span className="text-yellow-300 text-sm ml-1">CABS</span>
             </div>
           </a>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-1">
             {navItems.map((item) => (
-              <button
+              <a
                 key={item.label}
-                onClick={() => scrollToSection(item.href)}
+                href={item.href}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                   isScrolled
                     ? 'text-slate-700 hover:text-primary hover:bg-slate-100'
@@ -71,7 +61,7 @@ export function Header() {
                 }`}
               >
                 {item.label}
-              </button>
+              </a>
             ))}
           </nav>
 
@@ -87,10 +77,10 @@ export function Header() {
               <span>+91-123-456-7890</span>
             </a>
             <Button
-              onClick={() => scrollToSection('#contact')}
+              asChild
               className="bg-accent hover:bg-accent/90 text-white rounded-full px-6"
             >
-              Book Now
+              <a href="/contact">Book Now</a>
             </Button>
           </div>
 
@@ -118,13 +108,14 @@ export function Header() {
                 </div>
                 <nav className="flex flex-col p-6 gap-2">
                   {navItems.map((item) => (
-                    <button
+                    <a
                       key={item.label}
-                      onClick={() => scrollToSection(item.href)}
+                      href={item.href}
+                      onClick={() => setIsOpen(false)}
                       className="text-left px-4 py-3 rounded-lg text-slate-700 hover:bg-slate-100 hover:text-primary font-medium transition-colors"
                     >
                       {item.label}
-                    </button>
+                    </a>
                   ))}
                 </nav>
                 <div className="mt-auto p-6 border-t">
@@ -136,10 +127,10 @@ export function Header() {
                     <span>+91-123-456-7890</span>
                   </a>
                   <Button
-                    onClick={() => scrollToSection('#contact')}
+                    asChild
                     className="w-full bg-accent hover:bg-accent/90 text-white rounded-full"
                   >
-                    Book Now
+                    <a href="/contact">Book Now</a>
                   </Button>
                 </div>
               </div>
