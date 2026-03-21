@@ -6,14 +6,14 @@ import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const galleryImages = [
-  { id: 1, category: 'Fleet', title: 'Our Premium Fleet', color: 'bg-blue-500' },
-  { id: 2, category: 'Events', title: 'Corporate Events', color: 'bg-purple-500' },
-  { id: 3, category: 'Franchise', title: 'Franchise Partners', color: 'bg-green-500' },
-  { id: 4, category: 'Team', title: 'Our Team', color: 'bg-orange-500' },
-  { id: 5, category: 'Services', title: 'Delivery Services', color: 'bg-red-500' },
-  { id: 6, category: 'Fleet', title: 'Luxury Cars', color: 'bg-indigo-500' },
-  { id: 7, category: 'Events', title: 'Community Events', color: 'bg-pink-500' },
-  { id: 8, category: 'Franchise', title: 'Office Spaces', color: 'bg-teal-500' },
+  { id: 1, category: 'Fleet', title: 'Our Premium Fleet', color: 'bg-yellow-400' },
+  { id: 2, category: 'Events', title: 'Corporate Events', color: 'bg-gray-200' },
+  { id: 3, category: 'Franchise', title: 'Franchise Partners', color: 'bg-yellow-400' },
+  { id: 4, category: 'Team', title: 'Our Team', color: 'bg-gray-200' },
+  { id: 5, category: 'Services', title: 'Delivery Services', color: 'bg-yellow-400' },
+  { id: 6, category: 'Fleet', title: 'Luxury Cars', color: 'bg-gray-200' },
+  { id: 7, category: 'Events', title: 'Community Events', color: 'bg-yellow-400' },
+  { id: 8, category: 'Franchise', title: 'Office Spaces', color: 'bg-gray-200' },
 ];
 
 const categories = ['All', 'Fleet', 'Events', 'Franchise', 'Team', 'Services'];
@@ -36,17 +36,17 @@ const Gallery = () => {
       <Header />
       <main>
         {/* Page Header */}
-        <section className="pt-32 pb-16 bg-gradient-to-br from-primary to-blue-700">
+        <section className="pt-32 pb-16 bg-black">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4">Gallery</h1>
-            <p className="text-lg text-white/80 max-w-xl mx-auto">
+            <p className="text-lg text-gray-400 max-w-xl mx-auto">
               A glimpse into our operations, events, and the Nova Cabs family
             </p>
           </div>
         </section>
 
         {/* Gallery Section */}
-        <section className="py-20 lg:py-28 bg-slate-50">
+        <section className="py-20 lg:py-28 bg-gray-50">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             {/* Category Filter */}
             <div className="flex flex-wrap justify-center gap-2 mb-12">
@@ -54,10 +54,10 @@ const Gallery = () => {
                 <button
                   key={category}
                   onClick={() => setSelectedCategory(category)}
-                  className={`px-6 py-2 rounded-full font-medium transition-all ${
+                  className={`px-6 py-2 rounded-full font-medium transition-all border-2 ${
                     selectedCategory === category
-                      ? 'bg-primary text-white shadow-md'
-                      : 'bg-white text-slate-600 hover:bg-slate-100'
+                      ? 'bg-yellow-400 text-black border-yellow-400'
+                      : 'bg-white text-black border-gray-200 hover:border-yellow-400'
                   }`}
                 >
                   {category}
@@ -77,15 +77,15 @@ const Gallery = () => {
                   style={{ height: index === 0 || index === 5 ? '400px' : '200px' }}
                 >
                   <div className={`${image.color} w-full h-full flex items-center justify-center transition-transform duration-500 group-hover:scale-110`}>
-                    <div className="text-center text-white p-4">
-                      <div className="w-16 h-16 bg-white/20 rounded-xl mx-auto mb-4 flex items-center justify-center">
+                    <div className="text-center text-black p-4">
+                      <div className="w-16 h-16 bg-white/50 rounded-xl mx-auto mb-4 flex items-center justify-center">
                         <span className="text-2xl font-bold">{image.id}</span>
                       </div>
                       <h3 className="text-xl font-bold">{image.title}</h3>
-                      <p className="text-white/80 text-sm mt-2">{image.category}</p>
+                      <p className="text-black/70 text-sm mt-2">{image.category}</p>
                     </div>
                   </div>
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-300" />
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
                 </div>
               ))}
             </div>
@@ -112,14 +112,14 @@ const Gallery = () => {
                       galleryImages.find((i) => i.id === selectedImage)?.color
                     } w-full h-[60vh] flex items-center justify-center`}
                   >
-                    <div className="text-center text-white p-8">
-                      <div className="w-24 h-24 bg-white/20 rounded-2xl mx-auto mb-6 flex items-center justify-center">
+                    <div className="text-center text-black p-8">
+                      <div className="w-24 h-24 bg-white/50 rounded-2xl mx-auto mb-6 flex items-center justify-center">
                         <span className="text-4xl font-bold">{selectedImage}</span>
                       </div>
                       <h3 className="text-3xl font-bold">
                         {galleryImages.find((i) => i.id === selectedImage)?.title}
                       </h3>
-                      <p className="text-white/80 text-lg mt-2">
+                      <p className="text-black/70 text-lg mt-2">
                         {galleryImages.find((i) => i.id === selectedImage)?.category}
                       </p>
                     </div>

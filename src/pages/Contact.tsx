@@ -97,24 +97,24 @@ const Contact = () => {
       <Header />
       <main>
         {/* Page Header */}
-        <section className="pt-32 pb-16 bg-gradient-to-br from-primary to-blue-700">
+        <section className="pt-32 pb-16 bg-black">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4">Contact Us</h1>
-            <p className="text-lg text-white/80 max-w-xl mx-auto">
+            <p className="text-lg text-gray-400 max-w-xl mx-auto">
               Have questions? We would love to hear from you
             </p>
           </div>
         </section>
 
         {/* Contact Section */}
-        <section className="py-20 lg:py-28 bg-slate-50">
+        <section className="py-20 lg:py-28 bg-gray-50">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-3 gap-8">
               {/* Contact Form */}
               <div className="lg:col-span-2">
-                <Card className="border-0 shadow-xl">
+                <Card className="border-0 shadow-xl bg-white">
                   <CardContent className="p-8">
-                    <h2 className="text-2xl font-bold text-slate-900 mb-6">Send us a Message</h2>
+                    <h2 className="text-2xl font-bold text-black mb-6">Send us a Message</h2>
                     <form onSubmit={handleSubmit} className="space-y-6">
                       <div className="grid sm:grid-cols-2 gap-6">
                         <div className="space-y-2">
@@ -125,7 +125,7 @@ const Contact = () => {
                             value={formData.name}
                             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                             required
-                            className="h-12"
+                            className="h-12 border-gray-200"
                           />
                         </div>
                         <div className="space-y-2">
@@ -137,7 +137,7 @@ const Contact = () => {
                             value={formData.email}
                             onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                             required
-                            className="h-12"
+                            className="h-12 border-gray-200"
                           />
                         </div>
                       </div>
@@ -150,7 +150,7 @@ const Contact = () => {
                             placeholder="+91-XXXXXXXXXX"
                             value={formData.phone}
                             onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                            className="h-12"
+                            className="h-12 border-gray-200"
                           />
                         </div>
                         <div className="space-y-2">
@@ -159,7 +159,7 @@ const Contact = () => {
                             value={formData.enquiryType}
                             onValueChange={(value) => setFormData({ ...formData, enquiryType: value })}
                           >
-                            <SelectTrigger className="h-12">
+                            <SelectTrigger className="h-12 border-gray-200">
                               <SelectValue placeholder="Select enquiry type" />
                             </SelectTrigger>
                             <SelectContent>
@@ -179,17 +179,18 @@ const Contact = () => {
                           onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                           required
                           rows={5}
+                          className="border-gray-200"
                         />
                       </div>
                       <Button
                         type="submit"
                         size="lg"
                         disabled={isSubmitting}
-                        className="w-full bg-accent hover:bg-accent/90 text-white rounded-xl h-12 text-lg font-semibold"
+                        className="w-full bg-yellow-400 hover:bg-yellow-500 text-black font-semibold rounded-xl h-12 text-lg"
                       >
                         {isSubmitting ? (
                           <span className="flex items-center gap-2">
-                            <span className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                            <span className="w-5 h-5 border-2 border-black/30 border-t-black rounded-full animate-spin" />
                             Sending...
                           </span>
                         ) : (
@@ -207,32 +208,32 @@ const Contact = () => {
               {/* Contact Info */}
               <div className="space-y-6">
                 {contactInfo.map((info) => (
-                  <Card key={info.title} className="border-0 shadow-lg hover:shadow-xl transition-shadow">
+                  <Card key={info.title} className="border-0 shadow-lg hover:shadow-xl transition-shadow bg-white">
                     <CardContent className="p-6 flex items-start gap-4">
-                      <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                        <info.icon className="w-6 h-6 text-primary" />
+                      <div className="w-12 h-12 bg-yellow-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                        <info.icon className="w-6 h-6 text-yellow-500" />
                       </div>
                       <div>
-                        <h4 className="font-bold text-slate-900 mb-1">{info.title}</h4>
-                        <p className="text-slate-700">{info.content}</p>
-                        <p className="text-slate-500 text-sm">{info.subContent}</p>
+                        <h4 className="font-bold text-black mb-1">{info.title}</h4>
+                        <p className="text-gray-700">{info.content}</p>
+                        <p className="text-gray-500 text-sm">{info.subContent}</p>
                       </div>
                     </CardContent>
                   </Card>
                 ))}
                 <div className="grid grid-cols-2 gap-4">
-                  <Card className="border-0 shadow-md bg-gradient-to-br from-green-500 to-green-600 text-white">
+                  <Card className="border-0 shadow-md bg-yellow-400">
                     <CardContent className="p-6 text-center">
-                      <MessageCircle className="w-8 h-8 mx-auto mb-3" />
-                      <h4 className="font-bold mb-1">WhatsApp</h4>
-                      <p className="text-white/80 text-sm">+91-9XX-XXX-XXXX</p>
+                      <MessageCircle className="w-8 h-8 mx-auto mb-3 text-black" />
+                      <h4 className="font-bold mb-1 text-black">WhatsApp</h4>
+                      <p className="text-black/70 text-sm">+91-9XX-XXX-XXXX</p>
                     </CardContent>
                   </Card>
-                  <Card className="border-0 shadow-md bg-gradient-to-br from-blue-500 to-blue-600 text-white">
+                  <Card className="border-0 shadow-md bg-black text-white">
                     <CardContent className="p-6 text-center">
                       <Headphones className="w-8 h-8 mx-auto mb-3" />
                       <h4 className="font-bold mb-1">Live Chat</h4>
-                      <p className="text-white/80 text-sm">Available 24/7</p>
+                      <p className="text-gray-400 text-sm">Available 24/7</p>
                     </CardContent>
                   </Card>
                 </div>
@@ -242,15 +243,15 @@ const Contact = () => {
         </section>
 
         {/* Social Links */}
-        <section className="py-12">
+        <section className="py-12 bg-white">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p className="text-slate-500 mb-4">Follow us on social media</p>
+            <p className="text-gray-500 mb-4">Follow us on social media</p>
             <div className="flex justify-center gap-4">
               {socialLinks.map((social) => (
                 <a
                   key={social.label}
                   href={social.href}
-                  className="w-12 h-12 bg-slate-100 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-all text-slate-600"
+                  className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center hover:bg-yellow-400 hover:text-black transition-all text-gray-600"
                   aria-label={social.label}
                 >
                   <social.icon className="w-5 h-5" />

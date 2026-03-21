@@ -100,21 +100,21 @@ const Career = () => {
       <Header />
       <main>
         {/* Page Header */}
-        <section className="pt-32 pb-16 bg-gradient-to-br from-primary to-blue-700">
+        <section className="pt-32 pb-16 bg-black">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4">Careers</h1>
-            <p className="text-lg text-white/80 max-w-xl mx-auto">
+            <p className="text-lg text-gray-400 max-w-xl mx-auto">
               Join India's fastest-growing transportation company
             </p>
           </div>
         </section>
 
         {/* Benefits */}
-        <section className="py-20 lg:py-28">
+        <section className="py-20 lg:py-28 bg-white">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <span className="text-accent font-semibold text-sm uppercase tracking-wider">Why Join Us</span>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mt-3">
+              <span className="text-yellow-500 font-semibold text-sm uppercase tracking-wider">Why Join Us</span>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-black mt-3">
                 Benefits & Perks
               </h2>
             </div>
@@ -122,13 +122,13 @@ const Career = () => {
               {benefits.map((benefit) => (
                 <div
                   key={benefit.title}
-                  className="bg-slate-50 rounded-2xl p-6 text-center hover:bg-slate-100 transition-colors"
+                  className="bg-gray-50 rounded-2xl p-6 text-center hover:bg-yellow-50 transition-colors border border-gray-100"
                 >
-                  <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-4">
-                    <benefit.icon className="w-7 h-7 text-primary" />
+                  <div className="w-14 h-14 bg-yellow-400 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <benefit.icon className="w-7 h-7 text-black" />
                   </div>
-                  <h3 className="font-bold text-slate-900 mb-2">{benefit.title}</h3>
-                  <p className="text-slate-500 text-sm">{benefit.desc}</p>
+                  <h3 className="font-bold text-black mb-2">{benefit.title}</h3>
+                  <p className="text-gray-500 text-sm">{benefit.desc}</p>
                 </div>
               ))}
             </div>
@@ -136,27 +136,27 @@ const Career = () => {
         </section>
 
         {/* Job Listings */}
-        <section className="py-20 lg:py-28 bg-slate-50">
+        <section className="py-20 lg:py-28 bg-gray-50">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <span className="text-accent font-semibold text-sm uppercase tracking-wider">Openings</span>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mt-3">
+              <span className="text-yellow-500 font-semibold text-sm uppercase tracking-wider">Openings</span>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-black mt-3">
                 Current Openings
               </h2>
             </div>
             <div className="grid gap-4">
               {jobOpenings.map((job) => (
-                <Card key={job.id} className="group hover:shadow-lg transition-shadow border-slate-100">
+                <Card key={job.id} className="group hover:shadow-lg transition-shadow border-0 shadow-sm bg-white">
                   <CardContent className="p-6">
                     <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
                       <div className="flex-1">
                         <div className="flex flex-wrap items-center gap-3 mb-2">
-                          <h4 className="text-xl font-bold text-slate-900">{job.title}</h4>
-                          <Badge variant="secondary" className="bg-primary/10 text-primary">
+                          <h4 className="text-xl font-bold text-black">{job.title}</h4>
+                          <Badge variant="secondary" className="bg-yellow-100 text-black">
                             {job.category}
                           </Badge>
                         </div>
-                        <div className="flex flex-wrap gap-4 text-sm text-slate-500">
+                        <div className="flex flex-wrap gap-4 text-sm text-gray-500">
                           <span className="flex items-center gap-1">
                             <MapPin className="w-4 h-4" />
                             {job.location}
@@ -177,7 +177,7 @@ const Career = () => {
                       </div>
                       <Button
                         asChild
-                        className="bg-primary hover:bg-primary/90 text-white rounded-full"
+                        className="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold rounded-full"
                       >
                         <a href="/contact">
                           Apply Now
@@ -193,45 +193,45 @@ const Career = () => {
         </section>
 
         {/* Driver CTA */}
-        <section className="py-20 lg:py-28">
+        <section className="py-20 lg:py-28 bg-white">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="bg-gradient-to-br from-primary to-blue-700 rounded-3xl p-8 sm:p-16 text-white">
+            <div className="bg-black rounded-3xl p-8 sm:p-16 text-white">
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 <div>
                   <h2 className="text-3xl sm:text-4xl font-bold mb-4">
                     Become a Nova Driver Partner
                   </h2>
-                  <p className="text-lg text-white/80 mb-6">
+                  <p className="text-lg text-gray-400 mb-6">
                     Join our fleet of 1000+ drivers. Enjoy flexible hours, weekly payments, and attractive incentives.
                   </p>
                   <ul className="space-y-3 mb-8">
                     <li className="flex items-center gap-2">
-                      <span className="w-2 h-2 bg-green-400 rounded-full" />
+                      <span className="w-2 h-2 bg-yellow-400 rounded-full" />
                       <span>Flexible working hours</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <span className="w-2 h-2 bg-green-400 rounded-full" />
+                      <span className="w-2 h-2 bg-yellow-400 rounded-full" />
                       <span>Weekly payment settlements</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <span className="w-2 h-2 bg-green-400 rounded-full" />
+                      <span className="w-2 h-2 bg-yellow-400 rounded-full" />
                       <span>Higher earnings with incentives</span>
                     </li>
                   </ul>
                   <Button
                     asChild
                     size="lg"
-                    className="bg-white text-primary hover:bg-slate-100 rounded-full px-8"
+                    className="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold rounded-full px-8"
                   >
                     <a href="/contact">Register as Driver</a>
                   </Button>
                 </div>
                 <div className="bg-white/10 rounded-2xl p-8">
                   <h3 className="text-xl font-bold mb-4">Driver Testimonials</h3>
-                  <blockquote className="text-white/90 italic">
+                  <blockquote className="text-gray-300 italic">
                     "Joining Nova Cabs was the best decision. I earn more than my previous job and have the flexibility to spend time with my family."
                   </blockquote>
-                  <p className="text-white/60 mt-4">— Rajesh Kumar, Driver Partner since 2022</p>
+                  <p className="text-gray-500 mt-4">— Rajesh Kumar, Driver Partner since 2022</p>
                 </div>
               </div>
             </div>
