@@ -12,64 +12,9 @@ import {
   GraduationCap,
   Award,
   ChevronRight,
+  ArrowRight,
 } from 'lucide-react';
-
-const jobOpenings = [
-  {
-    id: 1,
-    title: 'Cab Driver',
-    location: 'Multiple Cities',
-    type: 'Full-time',
-    salary: '₹20,000 - ₹35,000/month',
-    experience: '0-2 years',
-    category: 'Driving',
-  },
-  {
-    id: 2,
-    title: 'Delivery Executive',
-    location: 'Pan India',
-    type: 'Full-time / Part-time',
-    salary: '₹15,000 - ₹25,000/month',
-    experience: '0-1 years',
-    category: 'Delivery',
-  },
-  {
-    id: 3,
-    title: 'Branch Manager',
-    location: 'Faridabad, Ahmedabad',
-    type: 'Full-time',
-    salary: '₹40,000 - ₹60,000/month',
-    experience: '3-5 years',
-    category: 'Management',
-  },
-  {
-    id: 4,
-    title: 'Customer Support Executive',
-    location: 'Remote / Office',
-    type: 'Full-time',
-    salary: '₹18,000 - ₹28,000/month',
-    experience: '0-2 years',
-    category: 'Support',
-  },
-  {
-    id: 5,
-    title: 'Marketing Executive',
-    location: 'Faridabad, Delhi',
-    type: 'Full-time',
-    salary: '₹25,000 - ₹40,000/month',
-    experience: '1-3 years',
-    category: 'Marketing',
-  },
-  {
-    id: 6,
-    title: 'Operations Manager',
-    location: 'Chennai, Surat',
-    type: 'Full-time',
-    salary: '₹35,000 - ₹55,000/month',
-    experience: '2-4 years',
-    category: 'Operations',
-  },
-];
+import { jobs } from '@/data/jobs';
 
 const benefits = [
   {
@@ -143,15 +88,20 @@ const Career = () => {
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-black mt-3">
                 Current Openings
               </h2>
+              <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
+                Explore our open positions and find the perfect role for you. Click on any job to view details and apply.
+              </p>
             </div>
             <div className="grid gap-4">
-              {jobOpenings.map((job) => (
-                <Card key={job.id} className="group hover:shadow-lg transition-shadow border-0 shadow-sm bg-white">
+              {jobs.map((job) => (
+                <Card key={job.id} className="group hover:shadow-lg transition-all border-0 shadow-sm bg-white cursor-pointer">
                   <CardContent className="p-6">
                     <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
                       <div className="flex-1">
                         <div className="flex flex-wrap items-center gap-3 mb-2">
-                          <h4 className="text-xl font-bold text-black">{job.title}</h4>
+                          <h4 className="text-xl font-bold text-black group-hover:text-yellow-600 transition-colors">
+                            {job.title}
+                          </h4>
                           <Badge variant="secondary" className="bg-yellow-100 text-black">
                             {job.category}
                           </Badge>
@@ -174,16 +124,28 @@ const Career = () => {
                             {job.salary}
                           </span>
                         </div>
+                        <p className="text-gray-600 mt-3 line-clamp-2">{job.description}</p>
                       </div>
-                      <Button
-                        asChild
-                        className="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold rounded-full"
-                      >
-                        <a href="/contact">
-                          Apply Now
-                          <ChevronRight className="w-4 h-4 ml-1" />
-                        </a>
-                      </Button>
+                      <div className="flex gap-3">
+                        <Button
+                          asChild
+                          variant="outline"
+                          className="border-2 border-gray-200 text-black hover:border-yellow-400 hover:text-yellow-600 rounded-full"
+                        >
+                          <a href={`/career/${job.id}`}>
+                            View Details
+                          </a>
+                        </Button>
+                        <Button
+                          asChild
+                          className="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold rounded-full"
+                        >
+                          <a href={`/apply/${job.id}`}>
+                            Apply Now
+                            <ChevronRight className="w-4 h-4 ml-1" />
+                          </a>
+                        </Button>
+                      </div>
                     </div>
                   </CardContent>
                 </Card>
@@ -223,7 +185,10 @@ const Career = () => {
                     size="lg"
                     className="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold rounded-full px-8"
                   >
-                    <a href="/contact">Register as Driver</a>
+                    <a href="/apply/cab-driver">
+                      Register as Driver
+                      <ArrowRight className="w-5 h-5 ml-2" />
+                    </a>
                   </Button>
                 </div>
                 <div className="bg-white/10 rounded-2xl p-8">

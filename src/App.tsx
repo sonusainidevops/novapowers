@@ -10,6 +10,8 @@ import Franchise from '@/pages/Franchise';
 import Branches from '@/pages/Branches';
 import Gallery from '@/pages/Gallery';
 import Career from '@/pages/Career';
+import JobDetail from '@/pages/JobDetail';
+import Apply from '@/pages/Apply';
 import Contact from '@/pages/Contact';
 import NotFound from '@/pages/NotFound';
 
@@ -29,6 +31,8 @@ const App = () => (
           <Route path="/branches" element={<Branches />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/career" element={<Career />} />
+          <Route path="/career/:jobId" element={<JobDetail />} />
+          <Route path="/apply/:jobId" element={<Apply />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
