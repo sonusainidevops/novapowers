@@ -32,7 +32,7 @@ const contactInfo = [
   {
     icon: Phone,
     title: 'Phone',
-    content: '+91-123-456-7890',
+    content: '+91 86009 39398',
     subContent: 'Toll Free: 1800-XXX-XXXX',
   },
   {

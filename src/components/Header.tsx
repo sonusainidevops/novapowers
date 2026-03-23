@@ -217,11 +217,11 @@ export function Header() {
           {/* CTA Button */}
           <div className="hidden lg:flex items-center gap-4">
             <a
-              href="tel:+911234567890"
+              href="tel:+918600939398"
               className="flex items-center gap-2 text-sm font-medium text-black"
             >
               <Phone className="w-4 h-4" />
-              <span>+91-123-456-7890</span>
+              <span>+91 86009 39398</span>
             </a>
             <Button
               asChild
@@ -346,11 +346,11 @@ export function Header() {
                 </nav>
                 <div className="mt-auto p-6 border-t border-gray-100">
                   <a
-                    href="tel:+911234567890"
+                    href="tel:+918600939398"
                     className="flex items-center gap-2 text-black mb-4"
                   >
                     <Phone className="w-4 h-4" />
-                    <span>+91-123-456-7890</span>
+                    <span>+91 86009 39398</span>
                   </a>
                   <Button
                     asChild
