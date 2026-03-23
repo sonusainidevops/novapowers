@@ -9,8 +9,10 @@ import {
   ArrowRight,
   Target,
   Eye,
-  Users,
   Star,
+  Package,
+  Bike,
+  Megaphone,
 } from 'lucide-react';
 
 const Home = () => {
@@ -70,106 +72,284 @@ const Home = () => {
                   </div>
                 </div>
               </div>
-              <div className="hidden lg:grid grid-cols-3 gap-4">
-                {[
-                  { icon: Shield, title: 'Safe Rides', desc: 'Verified drivers & sanitized vehicles' },
-                  { icon: Clock, title: 'On Time', desc: 'Punctual pickups & drop-offs' },
-                  { icon: MapPin, title: 'Wide Coverage', desc: 'Multiple cities across India' },
-                ].map((feature) => (
-                  <div
-                    key={feature.title}
-                    className="bg-gray-50 rounded-2xl p-6 border border-gray-100 hover:bg-yellow-50 hover:border-yellow-200 transition-all"
-                  >
-                    <div className="w-12 h-12 bg-yellow-400 rounded-xl flex items-center justify-center mb-4">
-                      <feature.icon className="w-6 h-6 text-black" />
+              <div className="hidden lg:block">
+                <div className="relative">
+                  <div className="absolute -inset-4 bg-yellow-400/20 rounded-3xl blur-2xl" />
+                  <div className="relative bg-gray-100 rounded-3xl overflow-hidden aspect-square flex items-center justify-center">
+                    <div className="text-center p-8">
+                      <Car className="w-32 h-32 text-yellow-500 mx-auto mb-4" />
+                      <p className="text-gray-500">Hero Image Placeholder</p>
                     </div>
-                    <h3 className="text-black font-semibold text-lg mb-2">{feature.title}</h3>
-                    <p className="text-gray-500 text-sm">{feature.desc}</p>
                   </div>
-                ))}
+                </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* About Preview */}
+        {/* Cab Service Section */}
         <section className="py-20 lg:py-28 bg-gray-50">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <span className="text-yellow-500 font-semibold text-sm uppercase tracking-wider">About Us</span>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-black mt-3 mb-4">
-                Who We Are
-              </h2>
-              <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-                Nova Powers is India's leading transportation and logistics service provider
-              </p>
-            </div>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-white rounded-2xl p-8 sm:p-10 shadow-lg border border-gray-100">
-                <div className="w-14 h-14 bg-yellow-400 rounded-xl flex items-center justify-center mb-6">
-                  <Eye className="w-7 h-7 text-black" />
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div className="order-2 lg:order-1">
+                <div className="relative">
+                  <div className="absolute -inset-4 bg-yellow-400/20 rounded-3xl blur-2xl" />
+                  <div className="relative bg-white rounded-3xl overflow-hidden shadow-xl aspect-[4/3] flex items-center justify-center border border-gray-100">
+                    <div className="text-center p-8">
+                      <Car className="w-24 h-24 text-yellow-500 mx-auto mb-4" />
+                      <p className="text-gray-500">Cab Service Image</p>
+                    </div>
+                  </div>
                 </div>
-                <h3 className="text-2xl font-bold text-black mb-4">Our Vision</h3>
-                <p className="text-gray-600">
-                  To become India's most trusted and innovative mobility solutions provider,
-                  transforming the way people travel and transport goods.
-                </p>
               </div>
-              <div className="bg-white rounded-2xl p-8 sm:p-10 shadow-lg border border-gray-100">
-                <div className="w-14 h-14 bg-yellow-400 rounded-xl flex items-center justify-center mb-6">
-                  <Target className="w-7 h-7 text-black" />
+              <div className="order-1 lg:order-2">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-12 h-12 bg-yellow-400 rounded-xl flex items-center justify-center">
+                    <Car className="w-6 h-6 text-black" />
+                  </div>
+                  <span className="text-yellow-500 font-semibold text-sm uppercase tracking-wider">Service 01</span>
                 </div>
-                <h3 className="text-2xl font-bold text-black mb-4">Our Mission</h3>
-                <p className="text-gray-600">
-                  To deliver exceptional transportation and logistics services through
-                  innovation, technology, and dedicated service.
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-black mb-6">
+                  Cab Service (Taxi)
+                </h2>
+                <p className="text-gray-600 text-lg mb-6">
+                  Experience premium cab services for all your travel needs. Whether it's a quick local ride, 
+                  an outstation journey, airport transfer, or corporate travel, we've got you covered with 
+                  our fleet of well-maintained vehicles and professional drivers.
                 </p>
+                <ul className="grid grid-cols-2 gap-3 mb-8">
+                  <li className="flex items-center gap-2 text-gray-700">
+                    <span className="w-2 h-2 bg-yellow-400 rounded-full" />
+                    Local Rides
+                  </li>
+                  <li className="flex items-center gap-2 text-gray-700">
+                    <span className="w-2 h-2 bg-yellow-400 rounded-full" />
+                    Outstation
+                  </li>
+                  <li className="flex items-center gap-2 text-gray-700">
+                    <span className="w-2 h-2 bg-yellow-400 rounded-full" />
+                    Airport Transfer
+                  </li>
+                  <li className="flex items-center gap-2 text-gray-700">
+                    <span className="w-2 h-2 bg-yellow-400 rounded-full" />
+                    Corporate Travel
+                  </li>
+                  <li className="flex items-center gap-2 text-gray-700">
+                    <span className="w-2 h-2 bg-yellow-400 rounded-full" />
+                    Oneway Trip
+                  </li>
+                  <li className="flex items-center gap-2 text-gray-700">
+                    <span className="w-2 h-2 bg-yellow-400 rounded-full" />
+                    Package Tours
+                  </li>
+                </ul>
+                <Button
+                  asChild
+                  size="lg"
+                  className="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold rounded-full px-8"
+                >
+                  <a href="/services#cab">
+                    View Cab Service
+                    <ArrowRight className="w-5 h-5 ml-2" />
+                  </a>
+                </Button>
               </div>
-            </div>
-            <div className="text-center mt-10">
-              <Button asChild variant="outline" className="border-2 border-black text-black hover:bg-black hover:text-white rounded-full px-8">
-                <a href="/about">Learn More About Us</a>
-              </Button>
             </div>
           </div>
         </section>
 
-        {/* Services Preview */}
+        {/* Delivery Service Section */}
         <section className="py-20 lg:py-28 bg-white">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <span className="text-yellow-500 font-semibold text-sm uppercase tracking-wider">What We Offer</span>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-black mt-3 mb-4">
-                Our Services
-              </h2>
-              <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-                Comprehensive transportation and logistics solutions
-              </p>
-            </div>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              {[
-                { icon: Car, title: 'Cab Service', desc: 'Local, Outstation, Airport, Corporate' },
-                { icon: MapPin, title: 'Delivery Service', desc: 'Nova Store, Delivery Partners' },
-                { icon: Car, title: 'Rental Service', desc: 'Car & Bike Rentals' },
-                { icon: Star, title: 'Advertisement', desc: 'Promote your business' },
-              ].map((service) => (
-                <a
-                  key={service.title}
-                  href="/services"
-                  className="group bg-gray-50 rounded-2xl p-6 hover:shadow-xl transition-all border border-gray-100 hover:border-yellow-200"
-                >
-                  <div className="w-14 h-14 bg-yellow-400 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                    <service.icon className="w-7 h-7 text-black" />
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-12 h-12 bg-yellow-400 rounded-xl flex items-center justify-center">
+                    <Package className="w-6 h-6 text-black" />
                   </div>
-                  <h3 className="text-xl font-bold text-black mb-2">{service.title}</h3>
-                  <p className="text-gray-600 text-sm">{service.desc}</p>
-                </a>
-              ))}
+                  <span className="text-yellow-500 font-semibold text-sm uppercase tracking-wider">Service 02</span>
+                </div>
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-black mb-6">
+                  Delivery Service
+                </h2>
+                <p className="text-gray-600 text-lg mb-6">
+                  Fast, reliable, and secure delivery solutions for your business and personal needs. 
+                  Join our Nova Store platform, become a delivery partner, or partner with us as a 
+                  store vendor to reach more customers across India.
+                </p>
+                <ul className="space-y-3 mb-8">
+                  <li className="flex items-start gap-3">
+                    <div className="w-6 h-6 bg-yellow-400 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <span className="text-black text-xs font-bold">1</span>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-black">Nova Store</h4>
+                      <p className="text-gray-500 text-sm">Our exclusive delivery platform for quick commerce</p>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-6 h-6 bg-yellow-400 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <span className="text-black text-xs font-bold">2</span>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-black">Delivery Partner</h4>
+                      <p className="text-gray-500 text-sm">Join our delivery network and earn</p>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-6 h-6 bg-yellow-400 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <span className="text-black text-xs font-bold">3</span>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-black">Store Vendor</h4>
+                      <p className="text-gray-500 text-sm">Partner with us for seamless deliveries</p>
+                    </div>
+                  </li>
+                </ul>
+                <Button
+                  asChild
+                  size="lg"
+                  className="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold rounded-full px-8"
+                >
+                  <a href="/services#delivery">
+                    View Delivery Service
+                    <ArrowRight className="w-5 h-5 ml-2" />
+                  </a>
+                </Button>
+              </div>
+              <div>
+                <div className="relative">
+                  <div className="absolute -inset-4 bg-yellow-400/20 rounded-3xl blur-2xl" />
+                  <div className="relative bg-gray-100 rounded-3xl overflow-hidden shadow-xl aspect-[4/3] flex items-center justify-center">
+                    <div className="text-center p-8">
+                      <Package className="w-24 h-24 text-yellow-500 mx-auto mb-4" />
+                      <p className="text-gray-500">Delivery Service Image</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div className="text-center mt-10">
-              <Button asChild className="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold rounded-full px-8">
-                <a href="/services">View All Services</a>
-              </Button>
+          </div>
+        </section>
+
+        {/* Rental Service Section */}
+        <section className="py-20 lg:py-28 bg-gray-50">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div className="order-2 lg:order-1">
+                <div className="relative">
+                  <div className="absolute -inset-4 bg-yellow-400/20 rounded-3xl blur-2xl" />
+                  <div className="relative bg-white rounded-3xl overflow-hidden shadow-xl aspect-[4/3] flex items-center justify-center border border-gray-100">
+                    <div className="text-center p-8">
+                      <Bike className="w-24 h-24 text-yellow-500 mx-auto mb-4" />
+                      <p className="text-gray-500">Rental Service Image</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="order-1 lg:order-2">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-12 h-12 bg-yellow-400 rounded-xl flex items-center justify-center">
+                    <Bike className="w-6 h-6 text-black" />
+                  </div>
+                  <span className="text-yellow-500 font-semibold text-sm uppercase tracking-wider">Service 03</span>
+                </div>
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-black mb-6">
+                  Rental Service
+                </h2>
+                <p className="text-gray-600 text-lg mb-6">
+                  Flexible vehicle rental options for your convenience. Choose from our wide range 
+                  of cars and bikes available for self-drive or with chauffeur. Perfect for 
+                  weekend getaways, business trips, or daily commuting needs.
+                </p>
+                <div className="grid sm:grid-cols-2 gap-4 mb-8">
+                  <div className="bg-white rounded-2xl p-6 border border-gray-100">
+                    <Car className="w-10 h-10 text-yellow-500 mb-3" />
+                    <h4 className="font-bold text-black mb-2">Car Rental</h4>
+                    <p className="text-gray-500 text-sm">Self-drive & chauffeur options available</p>
+                  </div>
+                  <div className="bg-white rounded-2xl p-6 border border-gray-100">
+                    <Bike className="w-10 h-10 text-yellow-500 mb-3" />
+                    <h4 className="font-bold text-black mb-2">Bike Rental</h4>
+                    <p className="text-gray-500 text-sm">Two-wheeler rentals for quick trips</p>
+                  </div>
+                </div>
+                <Button
+                  asChild
+                  size="lg"
+                  className="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold rounded-full px-8"
+                >
+                  <a href="/services#rental">
+                    View Rental Service
+                    <ArrowRight className="w-5 h-5 ml-2" />
+                  </a>
+                </Button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Advertisement Service Section */}
+        <section className="py-20 lg:py-28 bg-white">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-12 h-12 bg-yellow-400 rounded-xl flex items-center justify-center">
+                    <Megaphone className="w-6 h-6 text-black" />
+                  </div>
+                  <span className="text-yellow-500 font-semibold text-sm uppercase tracking-wider">Service 04</span>
+                </div>
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-black mb-6">
+                  Advertisement Service
+                </h2>
+                <p className="text-gray-600 text-lg mb-6">
+                  Promote your business with Nova Powers' innovative advertising solutions. 
+                  Reach thousands of potential customers through our extensive network of 
+                  taxis, shops, salons, and material stores across multiple cities.
+                </p>
+                <div className="space-y-4 mb-8">
+                  <div className="flex items-start gap-4 bg-gray-50 rounded-xl p-4">
+                    <div className="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Star className="w-6 h-6 text-black" />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-black mb-1">Local Business Ads</h4>
+                      <p className="text-gray-500 text-sm">Promote your local business to targeted audiences</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4 bg-gray-50 rounded-xl p-4">
+                    <div className="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Megaphone className="w-6 h-6 text-black" />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-black mb-1">Nova Channel Partner</h4>
+                      <p className="text-gray-500 text-sm">Advertise on screens in taxis, shops, salons, material stores</p>
+                    </div>
+                  </div>
+                </div>
+                <Button
+                  asChild
+                  size="lg"
+                  className="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold rounded-full px-8"
+                >
+                  <a href="/services#advertisement">
+                    View Advertisement Service
+                    <ArrowRight className="w-5 h-5 ml-2" />
+                  </a>
+                </Button>
+              </div>
+              <div>
+                <div className="relative">
+                  <div className="absolute -inset-4 bg-yellow-400/20 rounded-3xl blur-2xl" />
+                  <div className="relative bg-gray-100 rounded-3xl overflow-hidden shadow-xl aspect-[4/3] flex items-center justify-center">
+                    <div className="text-center p-8">
+                      <Megaphone className="w-24 h-24 text-yellow-500 mx-auto mb-4" />
+                      <p className="text-gray-500">Advertisement Service Image</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
