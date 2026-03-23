@@ -40,7 +40,7 @@ const Gallery = () => {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4">Gallery</h1>
             <p className="text-lg text-gray-400 max-w-xl mx-auto">
-              A glimpse into our operations, events, and the Nova Cabs family
+              A glimpse into our operations, events, and the Nova Powers family
             </p>
           </div>
         </section>

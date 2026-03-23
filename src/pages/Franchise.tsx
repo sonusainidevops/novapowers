@@ -81,7 +81,7 @@ const Franchise = () => {
               Franchise Model
             </h1>
             <p className="text-lg text-gray-400 max-w-xl mx-auto">
-              Partner with Nova Cabs and build your own successful business
+              Partner with Nova Powers and build your own successful business
             </p>
           </div>
         </section>

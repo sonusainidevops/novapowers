@@ -12,7 +12,7 @@ const About = () => {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4">About Us</h1>
             <p className="text-lg text-gray-400 max-w-xl mx-auto">
-              Learn about Nova Cabs, our journey, and our commitment to excellence
+              Learn about Nova Powers, our journey, and our commitment to excellence
             </p>
           </div>
         </section>
@@ -29,7 +29,7 @@ const About = () => {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
                 <p className="text-gray-600 leading-relaxed mb-6">
-                  Established with a vision to revolutionize transportation in India, Nova Cabs
+                  Established with a vision to revolutionize transportation in India, Nova Powers
                   has grown from a small local cab service to a comprehensive mobility solutions
                   provider. We currently operate across multiple states including Haryana,
                   Gujarat, Andhra Pradesh, and Tamil Nadu.

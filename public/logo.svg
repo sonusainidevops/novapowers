@@ -1,7 +1,7 @@
 <svg width="180" height="50" viewBox="0 0 180 50" fill="none" xmlns="http://www.w3.org/2000/svg">
   <rect width="180" height="50" rx="8" fill="#1E40AF"/>
   <text x="20" y="34" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="white">NOVA</text>
-  <text x="100" y="34" font-family="Arial, sans-serif" font-size="12" font-weight="400" fill="#FEF08A">CABS</text>
+  <text x="100" y="34" font-family="Arial, sans-serif" font-size="12" font-weight="400" fill="#FEF08A">POWERS</text>
   <circle cx="155" cy="25" r="12" fill="#DC2626"/>
   <path d="M150 25L154 29L161 21" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>

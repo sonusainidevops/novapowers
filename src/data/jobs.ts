@@ -24,12 +24,12 @@ export const jobs: Job[] = [
     experience: '0-2 years',
     category: 'Driving',
     department: 'Operations',
-    description: 'We are looking for reliable and professional cab drivers to join our growing fleet. As a Nova Cabs driver, you will be responsible for providing safe and comfortable transportation to our customers across the city.',
+    description: 'We are looking for reliable and professional cab drivers to join our growing fleet. As a Nova Powers driver, you will be responsible for providing safe and comfortable transportation to our customers across the city.',
     responsibilities: [
       'Pick up and drop off customers at their requested locations',
       'Follow traffic rules and maintain safe driving practices',
       'Keep the vehicle clean and well-maintained',
-      'Use the Nova Cabs driver app for navigation and trip management',
+      'Use the Nova Powers driver app for navigation and trip management',
       'Provide excellent customer service',
       'Handle cash and digital payments accurately',
     ],
@@ -133,7 +133,7 @@ export const jobs: Job[] = [
     experience: '0-2 years',
     category: 'Support',
     department: 'Customer Service',
-    description: 'Join our customer support team to provide exceptional service to Nova Cabs customers. You will handle queries, complaints, and ensure customer satisfaction.',
+    description: 'Join our customer support team to provide exceptional service to Nova Powers customers. You will handle queries, complaints, and ensure customer satisfaction.',
     responsibilities: [
       'Handle incoming calls and emails from customers',
       'Resolve customer complaints and issues promptly',
@@ -169,7 +169,7 @@ export const jobs: Job[] = [
     experience: '1-3 years',
     category: 'Marketing',
     department: 'Marketing',
-    description: 'We are looking for creative and results-driven Marketing Executives to promote Nova Cabs services and expand our customer base in Delhi NCR region.',
+    description: 'We are looking for creative and results-driven Marketing Executives to promote Nova Powers services and expand our customer base in Delhi NCR region.',
     responsibilities: [
       'Develop and execute local marketing campaigns',
       'Manage social media presence and content creation',

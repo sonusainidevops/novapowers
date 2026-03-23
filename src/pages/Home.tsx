@@ -29,7 +29,7 @@ const Home = () => {
                 </div>
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-black leading-tight mb-6">
                   Drive Your Dreams{' '}
-                  <span className="text-yellow-500">With Nova Cabs</span>
+                  <span className="text-yellow-500">With Nova Powers</span>
                 </h1>
                 <p className="text-lg sm:text-xl text-gray-600 mb-8 max-w-xl mx-auto lg:mx-0">
                   Your trusted partner for cab services, deliveries, rentals, and more.
@@ -101,7 +101,7 @@ const Home = () => {
                 Who We Are
               </h2>
               <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-                Nova Cabs is India's leading transportation and logistics service provider
+                Nova Powers is India's leading transportation and logistics service provider
               </p>
             </div>
             <div className="grid md:grid-cols-2 gap-8">

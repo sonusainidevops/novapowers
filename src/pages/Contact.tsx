@@ -38,8 +38,8 @@ const contactInfo = [
   {
     icon: Mail,
     title: 'Email',
-    content: 'info@novacabs.com',
-    subContent: 'support@novacabs.com',
+    content: 'info@novapowers.com',
+    subContent: 'support@novapowers.com',
   },
   {
     icon: MapPin,

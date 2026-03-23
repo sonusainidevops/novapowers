@@ -40,7 +40,7 @@ export function Header() {
           <a href="/" className="flex items-center gap-2">
             <div className="bg-black rounded-lg px-4 py-2">
               <span className="text-white font-bold text-xl tracking-tight">NOVA</span>
-              <span className="text-yellow-400 text-sm ml-1">CABS</span>
+              <span className="text-yellow-400 text-sm ml-1">POWERS</span>
             </div>
           </a>
 
@@ -86,7 +86,7 @@ export function Header() {
                 <div className="flex items-center justify-between p-6 border-b border-gray-100">
                   <div className="bg-black rounded-lg px-4 py-2">
                     <span className="text-white font-bold text-xl">NOVA</span>
-                    <span className="text-yellow-400 text-sm ml-1">CABS</span>
+                    <span className="text-yellow-400 text-sm ml-1">POWERS</span>
                   </div>
                   <Button variant="ghost" size="icon" onClick={() => setIsOpen(false)}>
                     <X className="h-5 w-5 text-black" />

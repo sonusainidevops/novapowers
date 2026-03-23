@@ -44,7 +44,7 @@ const JobDetail = () => {
   const handleShare = () => {
     if (navigator.share) {
       navigator.share({
-        title: `${job.title} at Nova Cabs`,
+        title: `${job.title} at Nova Powers`,
         text: `Check out this job opportunity: ${job.title}`,
         url: window.location.href,
       });

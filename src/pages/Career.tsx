@@ -194,7 +194,7 @@ const Career = () => {
                 <div className="bg-white/10 rounded-2xl p-8">
                   <h3 className="text-xl font-bold mb-4">Driver Testimonials</h3>
                   <blockquote className="text-gray-300 italic">
-                    "Joining Nova Cabs was the best decision. I earn more than my previous job and have the flexibility to spend time with my family."
+                    "Joining Nova Powers was the best decision. I earn more than my previous job and have the flexibility to spend time with my family."
                   </blockquote>
                   <p className="text-gray-500 mt-4">— Rajesh Kumar, Driver Partner since 2022</p>
                 </div>
