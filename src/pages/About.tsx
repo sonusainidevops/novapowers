@@ -83,7 +83,8 @@ const About = () => {
         <section className="py-20 lg:py-28 bg-white">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-yellow-400 rounded-2xl p-8 sm:p-10 relative overflow-hidden">
+              {/* Vision */}
+              <div id="vision" className="bg-yellow-400 rounded-2xl p-8 sm:p-10 relative overflow-hidden scroll-mt-32">
                 <div className="relative z-10">
                   <div className="w-14 h-14 bg-black/20 rounded-xl flex items-center justify-center mb-6">
                     <Eye className="w-7 h-7 text-black" />
@@ -98,7 +99,8 @@ const About = () => {
                 </div>
               </div>
 
-              <div className="bg-gray-50 rounded-2xl p-8 sm:p-10 border border-gray-100">
+              {/* Mission */}
+              <div id="mission" className="bg-gray-50 rounded-2xl p-8 sm:p-10 border border-gray-100 scroll-mt-32">
                 <div className="relative z-10">
                   <div className="w-14 h-14 bg-yellow-400 rounded-xl flex items-center justify-center mb-6">
                     <Target className="w-7 h-7 text-black" />
