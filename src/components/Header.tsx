@@ -21,12 +21,12 @@ const serviceCategories = [
     href: '/services#cab',
     icon: Car,
     items: [
-      { title: 'Local', href: '/services#cab' },
-      { title: 'Outstation', href: '/services#cab' },
-      { title: 'Airport', href: '/services#cab' },
-      { title: 'Corporate', href: '/services#cab' },
-      { title: 'Oneway', href: '/services#cab' },
-      { title: 'Package', href: '/services#cab' },
+      { title: 'Local', href: '/services/cab/local' },
+      { title: 'Outstation', href: '/services/cab/outstation' },
+      { title: 'Airport', href: '/services/cab/airport' },
+      { title: 'Corporate', href: '/services/cab/corporate' },
+      { title: 'Oneway', href: '/services/cab/oneway' },
+      { title: 'Package', href: '/services/cab/package' },
     ],
   },
   {
@@ -34,9 +34,9 @@ const serviceCategories = [
     href: '/services#delivery',
     icon: Package,
     items: [
-      { title: 'Nova Store', href: '/services#delivery' },
-      { title: 'Delivery Partner', href: '/services#delivery' },
-      { title: 'Store Vendor', href: '/services#delivery' },
+      { title: 'Nova Store', href: '/services/delivery/nova-store' },
+      { title: 'Delivery Partner', href: '/services/delivery/delivery-partner' },
+      { title: 'Store Vendor', href: '/services/delivery/store-vendor' },
     ],
   },
   {
@@ -44,8 +44,8 @@ const serviceCategories = [
     href: '/services#rental',
     icon: Bike,
     items: [
-      { title: 'Car Rental', href: '/services#rental' },
-      { title: 'Bike Rental', href: '/services#rental' },
+      { title: 'Car Rental', href: '/services/rental/car-rental' },
+      { title: 'Bike Rental', href: '/services/rental/bike-rental' },
     ],
   },
   {
@@ -53,8 +53,8 @@ const serviceCategories = [
     href: '/services#advertisement',
     icon: Megaphone,
     items: [
-      { title: 'Advertisement of Local Business', href: '/services#advertisement' },
-      { title: 'Nova Channel Partner in Screen for Taxi, Shop, Salon, Material Shop etc', href: '/services#advertisement' },
+      { title: 'Advertisement of Local Business', href: '/services/advertisement/local-business-ads' },
+      { title: 'Nova Channel Partner in Screen for Taxi, Shop, Salon, Material Shop etc', href: '/services/advertisement/nova-channel-partner' },
     ],
   },
 ];
