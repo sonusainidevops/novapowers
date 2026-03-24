@@ -37,7 +37,7 @@ const About = () => {
                 {
                   name: 'A P Mishra',
                   role: 'Managing Director',
-                  photo: '/assets/leadership/ap-misra.jpeg',
+                  photo: '/assets/leadership/ap-misra-managing-director.jpeg',
                   bio:
                     'Leading Nova Powers with a focus on safety, customer trust, and innovation across transportation and logistics services.',
                 },
