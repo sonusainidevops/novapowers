@@ -17,12 +17,19 @@ import {
   IndianRupee,
 } from 'lucide-react';
 import { getJobById } from '@/data/jobs';
+import { useSeo } from '@/hooks/use-seo';
 
 const Apply = () => {
   const { jobId } = useParams<{ jobId: string }>();
   const navigate = useNavigate();
   const job = jobId ? getJobById(jobId) : undefined;
 
+  useSeo({
+    title: job ? `Nova Powers | Apply: ${job.title}` : 'Nova Powers | Apply',
+    description: 'Apply for jobs at Nova Powers taxi company.',
+    keywords: 'Nova Powers apply, job application',
+    image: '/hero.png',
+  });
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',

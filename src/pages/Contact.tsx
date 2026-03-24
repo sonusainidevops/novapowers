@@ -27,6 +27,7 @@ import {
   Instagram,
   Linkedin,
 } from 'lucide-react';
+import { useSeo } from '@/hooks/use-seo';
 
 const contactInfo = [
   {
@@ -74,6 +75,12 @@ const enquiryTypes = [
 ];
 
 const Contact = () => {
+  useSeo({
+    title: 'Nova Powers | Contact',
+    description: 'Contact Nova Powers taxi company head office in Faridabad. Phone +91 86009 39398.',
+    keywords: 'Nova Powers contact, head office, Faridabad, phone',
+    image: '/hero.png',
+  });
   const [formData, setFormData] = useState({
     name: '',
     email: '',

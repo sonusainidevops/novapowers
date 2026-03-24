@@ -2,6 +2,7 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import { useSeo } from '@/hooks/use-seo';
 import {
   Car,
   Zap,
@@ -70,6 +71,12 @@ const whyChooseUs = [
 ];
 
 const Franchise = () => {
+  useSeo({
+    title: 'Nova Powers | Franchise',
+    description: 'Explore Nova Powers taxi company franchise model and opportunities.',
+    keywords: 'Nova Powers franchise, taxi franchise, partnership',
+    image: '/hero.png',
+  });
   return (
     <div className="min-h-screen bg-white">
       <Header />

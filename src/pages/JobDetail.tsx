@@ -16,12 +16,19 @@ import {
   Building,
 } from 'lucide-react';
 import { getJobById } from '@/data/jobs';
+import { useSeo } from '@/hooks/use-seo';
 
 const JobDetail = () => {
   const { jobId } = useParams<{ jobId: string }>();
   const navigate = useNavigate();
   const job = jobId ? getJobById(jobId) : undefined;
 
+  useSeo({
+    title: job ? `Nova Powers | ${job.title}` : 'Nova Powers | Job',
+    description: job ? `Apply for ${job.title} at Nova Powers taxi company.` : 'Job opportunity at Nova Powers taxi company.',
+    keywords: job ? `Nova Powers job, ${job.title}, career` : 'Nova Powers job, career',
+    image: '/hero.png',
+  });
   if (!job) {
     return (
       <div className="min-h-screen bg-white">

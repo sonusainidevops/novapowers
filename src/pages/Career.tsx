@@ -15,6 +15,7 @@ import {
   ArrowRight,
 } from 'lucide-react';
 import { jobs } from '@/data/jobs';
+import { useSeo } from '@/hooks/use-seo';
 
 const benefits = [
   {
@@ -40,6 +41,12 @@ const benefits = [
 ];
 
 const Career = () => {
+  useSeo({
+    title: 'Nova Powers | Career',
+    description: 'Join Nova Powers taxi company. Explore open positions and apply.',
+    keywords: 'Nova Powers career, jobs, hiring',
+    image: '/hero.png',
+  });
   return (
     <div className="min-h-screen bg-white">
       <Header />

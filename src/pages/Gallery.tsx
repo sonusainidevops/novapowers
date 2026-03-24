@@ -4,6 +4,7 @@ import { Footer } from '@/components/Footer';
 import { Dialog, DialogContent, DialogTitle } from '@/components/ui/dialog';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useSeo } from '@/hooks/use-seo';
 
 const galleryImages = [
   { id: 1, category: 'Fleet', title: 'Our Premium Fleet', color: 'bg-yellow-400' },
@@ -19,6 +20,12 @@ const galleryImages = [
 const categories = ['All', 'Fleet', 'Events', 'Franchise', 'Team', 'Services'];
 
 const Gallery = () => {
+  useSeo({
+    title: 'Nova Powers | Gallery',
+    description: 'Explore Nova Powers taxi company gallery and visuals.',
+    keywords: 'Nova Powers gallery, photos, visuals',
+    image: '/hero.png',
+  });
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
 

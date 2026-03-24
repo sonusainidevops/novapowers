@@ -2,6 +2,7 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Building2, MapPin, Phone, Star } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useSeo } from '@/hooks/use-seo';
 
 const branchOffices = [
   {
@@ -17,7 +18,7 @@ const branchOffices = [
     state: 'Gujarat',
     type: 'Branch Office',
     address: '45 Business Park, SG Highway',
-    phone: '+91-79-XXXXXXX',
+    phone: '+91 86009 39398',
     featured: false,
   },
   {
@@ -25,7 +26,7 @@ const branchOffices = [
     state: 'Gujarat',
     type: 'Branch Office',
     address: '78 Ring Road, Adajan',
-    phone: '+91-261-XXXXXXX',
+    phone: '+91 86009 39398',
     featured: false,
   },
   {
@@ -33,7 +34,7 @@ const branchOffices = [
     state: 'Gujarat',
     type: 'Branch Office',
     address: '25 Sector 11, Infocity',
-    phone: '+91-79-XXXXXXX',
+    phone: '+91 86009 39398',
     featured: false,
   },
   {
@@ -41,7 +42,7 @@ const branchOffices = [
     state: 'Andhra Pradesh',
     type: 'Branch Office',
     address: '12 Kadapa Road',
-    phone: '+91-8561-XXXXXX',
+    phone: '+91 86009 39398',
     featured: false,
   },
   {
@@ -49,7 +50,7 @@ const branchOffices = [
     state: 'Andhra Pradesh',
     type: 'Branch Office',
     address: '56 Temple Road',
-    phone: '+91-877-XXXXXXX',
+    phone: '+91 86009 39398',
     featured: false,
   },
   {
@@ -57,7 +58,7 @@ const branchOffices = [
     state: 'Tamil Nadu',
     type: 'Branch Office',
     address: '34 Anna Salai, T Nagar',
-    phone: '+91-44-XXXXXXX',
+    phone: '+91 86009 39398',
     featured: false,
   },
 ];
@@ -70,6 +71,12 @@ const franchiseLocations = [
 ];
 
 const Branches = () => {
+  useSeo({
+    title: 'Nova Powers | Branches',
+    description: 'Nova Powers taxi company branch offices across India including Faridabad.',
+    keywords: 'Nova Powers branches, offices, Faridabad, India',
+    image: '/hero.png',
+  });
   const headOffice = branchOffices.find((b) => b.featured);
   const otherOffices = branchOffices.filter((b) => !b.featured);
 

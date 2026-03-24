@@ -1,6 +1,7 @@
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Button } from '@/components/ui/button';
+import { useSeo } from '@/hooks/use-seo';
 import {
   Car,
   Shield,
@@ -16,6 +17,14 @@ import {
 } from 'lucide-react';
 
 const Home = () => {
+  useSeo({
+    title: 'Nova Powers | Smart Cab Booking, Delivery & Rentals',
+    description:
+      'Nova Powers is a smart and affordable cab booking app to find nearby Rikshaw, Car, and Bike rides with real-time location, wallet payments, and refer & earn.',
+    keywords:
+      'Nova Powers, taxi, cab, rikshaw, car, bike, delivery, rentals, outstation, airport, corporate',
+    image: '/hero.png',
+  });
   return (
     <div className="min-h-screen bg-white">
       <Header />
@@ -76,11 +85,7 @@ const Home = () => {
                 <div className="relative">
                   <div className="absolute -inset-4 bg-yellow-400/20 rounded-3xl blur-2xl" />
                   <div className="relative bg-gray-100 rounded-3xl overflow-hidden aspect-square flex items-center justify-center">
-                    <img
-                      src="/placeholder.svg"
-                      alt="Nova Powers hero"
-                      className="w-full h-full object-contain"
-                    />
+                    <img src="/hero.png" alt="Nova Powers hero" className="w-full h-full object-contain" />
                   </div>
                 </div>
               </div>

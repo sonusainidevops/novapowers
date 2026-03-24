@@ -3,6 +3,7 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import { useSeo } from '@/hooks/use-seo';
 import {
   Car,
   Package,
@@ -89,6 +90,12 @@ const features = [
 ];
 
 const Services = () => {
+  useSeo({
+    title: 'Nova Powers | Services',
+    description: 'Cab, Delivery, Rental, and Advertisement services by Nova Powers taxi company.',
+    keywords: 'Nova Powers services, cab, delivery, rental, advertisement',
+    image: '/hero.png',
+  });
   const [activeService, setActiveService] = useState('cab');
   const currentService = serviceCategories.find((s) => s.id === activeService);
 

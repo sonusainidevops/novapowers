@@ -1,8 +1,15 @@
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Target, Eye, Building2, Users, Award, TrendingUp } from 'lucide-react';
+import { useSeo } from '@/hooks/use-seo';
 
 const About = () => {
+  useSeo({
+    title: 'Nova Powers | About',
+    description: 'Learn about Nova Powers taxi company, our vision, mission, and leadership team.',
+    keywords: 'Nova Powers, taxi company, about, leadership, mission, vision',
+    image: '/hero.png',
+  });
   return (
     <div className="min-h-screen bg-white">
       <Header />
