@@ -101,10 +101,11 @@ const Home = () => {
                 <div className="relative">
                   <div className="absolute -inset-4 bg-yellow-400/20 rounded-3xl blur-2xl" />
                   <div className="relative bg-white rounded-3xl overflow-hidden shadow-xl aspect-[4/3] flex items-center justify-center border border-gray-100">
-                    <div className="text-center p-8">
-                      <Car className="w-24 h-24 text-yellow-500 mx-auto mb-4" />
-                      <p className="text-gray-500">Cab Service Image</p>
-                    </div>
+                    <img
+                      src="/assets/home/WhatsApp Image 2026-03-24 at 9.40.28 AM.jpeg"
+                      alt="Cab service"
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                 </div>
               </div>
@@ -226,11 +227,12 @@ const Home = () => {
               <div>
                 <div className="relative">
                   <div className="absolute -inset-4 bg-yellow-400/20 rounded-3xl blur-2xl" />
-                  <div className="relative bg-gray-100 rounded-3xl overflow-hidden shadow-xl aspect-[4/3] flex items-center justify-center">
-                    <div className="text-center p-8">
-                      <Package className="w-24 h-24 text-yellow-500 mx-auto mb-4" />
-                      <p className="text-gray-500">Delivery Service Image</p>
-                    </div>
+                  <div className="relative rounded-3xl overflow-hidden shadow-xl aspect-[4/3] flex items-center justify-center">
+                    <img
+                      src="/assets/home/WhatsApp Image 2026-03-24 at 9.40.29 AM.jpeg"
+                      alt="Delivery service"
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                 </div>
               </div>
@@ -246,10 +248,11 @@ const Home = () => {
                 <div className="relative">
                   <div className="absolute -inset-4 bg-yellow-400/20 rounded-3xl blur-2xl" />
                   <div className="relative bg-white rounded-3xl overflow-hidden shadow-xl aspect-[4/3] flex items-center justify-center border border-gray-100">
-                    <div className="text-center p-8">
-                      <Bike className="w-24 h-24 text-yellow-500 mx-auto mb-4" />
-                      <p className="text-gray-500">Rental Service Image</p>
-                    </div>
+                    <img
+                      src="/assets/home/WhatsApp Image 2026-03-24 at 9.40.30 AM.jpeg"
+                      alt="Rental service"
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                 </div>
               </div>
