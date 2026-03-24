@@ -41,6 +41,13 @@ const About = () => {
                   bio:
                     'Driving operational excellence and service quality with customer-first execution.',
                 },
+                {
+                  name: 'Sumeet Singh',
+                  role: 'Director',
+                  photo: '/assets/leadership/sumeet-singh.jpeg',
+                  bio:
+                    'Strengthening business operations and partnerships with a focus on growth.',
+                },
               ].map((member) => (
                 <div
                   key={member.name}

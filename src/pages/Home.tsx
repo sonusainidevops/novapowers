@@ -76,10 +76,11 @@ const Home = () => {
                 <div className="relative">
                   <div className="absolute -inset-4 bg-yellow-400/20 rounded-3xl blur-2xl" />
                   <div className="relative bg-gray-100 rounded-3xl overflow-hidden aspect-square flex items-center justify-center">
-                    <div className="text-center p-8">
-                      <Car className="w-32 h-32 text-yellow-500 mx-auto mb-4" />
-                      <p className="text-gray-500">Hero Image Placeholder</p>
-                    </div>
+                    <img
+                      src="/placeholder.svg"
+                      alt="Nova Powers hero"
+                      className="w-full h-full object-contain"
+                    />
                   </div>
                 </div>
               </div>
