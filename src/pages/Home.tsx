@@ -84,7 +84,7 @@ const Home = () => {
               <div className="hidden lg:block">
                 <div className="relative">
                   <div className="absolute -inset-4 bg-yellow-400/20 rounded-3xl blur-2xl" />
-                  <div className="relative bg-gray-100 rounded-3xl overflow-hidden aspect-square flex items-center justify-center">
+                  <div className="relative rounded-3xl overflow-hidden aspect-square flex items-center justify-center">
                     <img src="/hero.png" alt="Nova Powers hero" className="w-full h-full object-contain" />
                   </div>
                 </div>
