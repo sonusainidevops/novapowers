@@ -33,7 +33,7 @@ const contactInfo = [
     icon: Phone,
     title: 'Phone',
     content: '+91 86009 39398',
-    subContent: 'Toll Free: 1800-XXX-XXXX',
+    subContent: 'Mo: 8600939398',
   },
   {
     icon: Mail,
@@ -44,8 +44,8 @@ const contactInfo = [
   {
     icon: MapPin,
     title: 'Head Office',
-    content: 'Nova Towers, Sector 15',
-    subContent: 'Faridabad, Haryana, India',
+    content: "Nova’sPowers Ltd, Mannat Arcade, 2nd Floor, 12/2 Old Sher Shah Suri Road",
+    subContent: 'Sector 36, Near Mother Son Company, Faridabad, Haryana – 121003',
   },
   {
     icon: Clock,

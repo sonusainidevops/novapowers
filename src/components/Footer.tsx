@@ -48,7 +48,7 @@ export function Footer() {
             <div className="space-y-3">
               <div className="flex items-center gap-3 text-sm">
                 <MapPin className="w-5 h-5 text-yellow-400" />
-                <span>Nova Towers, Sector 15, Faridabad</span>
+                <span>Nova’sPowers Ltd, Mannat Arcade, 2nd Floor, 12/2 Old Sher Shah Suri Road, Sector 36, Near Mother Son Company, Faridabad, Haryana – 121003</span>
               </div>
               <div className="flex items-center gap-3 text-sm">
                 <Phone className="w-5 h-5 text-yellow-400" />

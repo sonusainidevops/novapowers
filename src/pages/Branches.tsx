@@ -8,8 +8,8 @@ const branchOffices = [
     city: 'Faridabad',
     state: 'Haryana',
     type: 'Head Office',
-    address: 'Nova Towers, Sector 15',
-    phone: '+91-129-XXXXXXX',
+    address: "Nova’sPowers Ltd, Mannat Arcade, 2nd Floor, 12/2 Old Sher Shah Suri Road, Sector 36, Near Mother Son Company",
+    phone: '+91 86009 39398',
     featured: true,
   },
   {

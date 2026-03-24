@@ -17,6 +17,59 @@ const About = () => {
           </div>
         </section>
 
+        <section className="py-20 lg:py-28 bg-white">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <span className="text-yellow-500 font-semibold text-sm uppercase tracking-wider">Leadership</span>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-black mt-3">
+                Management Team
+              </h2>
+            </div>
+            <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+              {[
+                {
+                  name: 'A P Mishra',
+                  role: 'Managing Director',
+                  photo: '/assets/leadership/ap-misra.jpeg',
+                  bio:
+                    'Leading Nova Powers with a focus on safety, customer trust, and innovation across transportation and logistics services.',
+                },
+                {
+                  name: 'Charan Singh',
+                  role: 'Director',
+                  photo: '/assets/leadership/charan-singh.jpeg',
+                  bio:
+                    'Driving operational excellence and service quality with customer-first execution.',
+                },
+              ].map((member) => (
+                <div
+                  key={member.name}
+                  className="bg-gray-50 rounded-3xl p-6 sm:p-8 shadow-xl border border-gray-100 flex flex-col sm:flex-row gap-6 items-center"
+                >
+                  <img
+                    src={member.photo}
+                    alt={member.role}
+                    className="w-28 h-28 rounded-2xl object-cover border border-gray-200"
+                  />
+                  <div className="text-center sm:text-left">
+                    <h3 className="text-2xl font-bold text-black">{member.name}</h3>
+                    <p className="text-yellow-600 font-semibold mb-2">{member.role}</p>
+                    <p className="text-gray-600">{member.bio}</p>
+                    <div className="mt-4">
+                      <a
+                        href="/contact"
+                        className="inline-flex items-center gap-2 bg-yellow-400 hover:bg-yellow-500 text-black font-semibold rounded-full px-6 py-3"
+                      >
+                        Get in Touch
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Profile Section */}
         <section className="py-20 lg:py-28 bg-gray-50">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
